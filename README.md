@@ -38,3 +38,23 @@ dist-ml-redis-cluster/
 ├── results/              # 存放输出结果
 ├── requirements.txt      # 依赖列表
 └── README.md
+```
+## 模拟
+
+### 1. 思路
+在Linux(stu集群的)中的服务器作为redis主端口，用于作为redis分发服务器
+在本地电脑，使用终端窗口模拟四台机器：分别扮演producer*1, worker*2, collector*1
+
+![Model](docs/model.png)
+---
+### 2. 实际
+Producer: 运行core.producer
+Worker: 运行core.worker
+Collector: 运行core.collector 
+### 3. 问题
+在运行第75个分发时，卡住了
+我在redis端口发现，collector没有收集数据
+最后也没有解决， 如图
+![BUG](docs/bug.png)
+
+
