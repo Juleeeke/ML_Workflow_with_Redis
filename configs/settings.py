@@ -4,7 +4,7 @@ import os
 #主机的IP：
 #单设备模拟，以'localhost'
 #多设备，指向主机的IP
-REDIS_HOST = os.getenv('REDIS_HOST', 'localhost')
+REDIS_HOST = os.getenv('REDIS_HOST', '172.19.123.33')
 REDIS_PORT = int(os.getenv('REDIS_PORT', 6379))
 REDIS_PASSWORD = os.getenv('REDIS_PASSWORD', None)
 REDIS_DB = 0
